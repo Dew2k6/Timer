@@ -1,0 +1,102 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.timer-display {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+input[type="text"], button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFD700;
+  color: black;
+  cursor: pointer;
+}
+
+.lofi-btn:hover {
+  background-position: right center;
+}
+
+/* Add styles for the Background Changing button */
+.background-change-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Add styles for white background */
+body.white-bg {
+  background-color: white;
+}
+
+/* Change timer display color to black when white background is active */
+body.white-bg .timer-display {
+  color: black;
+}
+
+/* Add styles for the Resume button */
+.resume-btn {
+  /* Existing styles */
+  background-color: #FFD700;
+  color: black;
+}
+
+/* Add transition effect for background color change */
+body {
+  transition: background-color 1s ease;
+}
+
+/* Add rainbow color effect to the Play Lofi button */
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.lofi-btn {
+  /* Existing styles */
+  color: black;
+  /* Rainbow color effect */
+  background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  background-size: 200% auto;
+  animation: rainbow 3s linear infinite; /* Adjust duration as needed */
+}
+
+/* Change button color to black and text color to white */
+body.white-bg button {
+  transition: background-color 1s ease, color 1s ease;
+  background-color: black;
+  color: white;
+}
+
+/* Change input color to gray */
+body.white-bg input[type="text"] {
+  background-color: #ddd;
+}
